@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   namespace :api do 
     namespace :v1 do 
      resources :fruits, only: [:index, :create, :destroy, :update]
+     resources :comments, only: [:create]
     end 
-  end 
+  end
+
+  resources :fruits, only: [:show]
 end

@@ -7,3 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 fruits = ['Mango', 'Pineapple', 'Passion fruit', 'Dragon fruit']
 fruits.each{|fruit| Fruit.create(name: fruit, description: "I am a delicious #{fruit}.")}
+
+Fruit.find_each do |fruit|
+  3.times do |i|
+    Comment.create(fruit: fruit, body: "Comment body #{i}")
+  end
+end

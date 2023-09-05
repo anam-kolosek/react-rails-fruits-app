@@ -28,8 +28,9 @@ class Fruit extends React.Component{
       <div>
         {name}
         {description}
-        <button onClick={() => this.handleEdit()}>{this.state.editable? 'Submit' : 'Edit'}</button>
-        <button onClick={() => this.props.handleDelete(this.props.fruit.id)}>Delete</button>
+        <a href={`/fruits/${this.props.fruit.id}`} className="btn btn-primary">Show</a>
+        <button onClick={() => this.handleEdit()} className="btn btn-primary mr-1">{this.state.editable? 'Submit' : 'Edit'}</button>
+        <button onClick={() => this.props.handleDelete(this.props.fruit.id)} className="btn btn-danger mr-1">Delete</button>
       </div>
     )      
   }

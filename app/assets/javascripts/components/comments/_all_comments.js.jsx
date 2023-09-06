@@ -1,9 +1,9 @@
-const AllComments = ({comments}) => {
+const AllComments = ({comments, handleEdit, handleDelete}) => {
 
   var all_comments = comments.map((comment) => {
     return(
       <div key={comment.id}>
-       <Comment comment={comment}/>
+       <Comment comment={comment} handleEdit={handleEdit} handleDelete={handleDelete}/>
       </div>
     )
   })
